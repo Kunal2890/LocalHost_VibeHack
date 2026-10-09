@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chaos Click</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;600;700&family=Bungee&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  Quackwell Institute of Technology (QIT) is a FICTIONAL college.
+  The page looks like a normal student portal. Every element has up to three versions of its text:
+    data-calm = normal,  data-c4 = from chaos level 4,  data-c8 = from chaos level 8.
+  Elements with data-flee run away from the mouse (see js/flee.js).
+-->
+
+<div id="stage"><div id="site"><div class="wrap">
+
+  <div class="utility">
+    <span>Admissions 2026 open</span>
+    <span class="utility-links"><a href="#features">Library</a><a href="#features">Alumni</a><a href="#contact">Notices</a><a href="#pricing">Programmes</a></span>
+  </div>
+
+  <header>
+    <button class="logo" data-act="logo" id="logo" type="button" aria-label="Quackwell Institute of Technology home">
+      <i></i>
+      <span class="logo-text"><b data-calm="QIT™" data-c4="QUIT™" data-c8="QUIT!!!">QIT™</b><small>Quackwell Institute of Technology</small></span>
+    </button>
+    <nav aria-label="Main">
+      <a href="#top" data-nav="home" data-calm="Home" data-c4="Not Home" data-c8="Away">Home</a>
+      <a href="#features" data-nav="features" data-calm="Student Services" data-c4="Student Problems" data-c8="Student Tears">Student Services</a>
+      <a href="#pricing" data-nav="pricing" data-flee="shy" data-flee-min="6" data-tired="4" data-calm="Programmes &amp; Fees" data-c4="Programmes &amp; Ransom" data-c8="Your Soul">Programmes &amp; Fees</a>
+      <a href="#contact" data-nav="contact" data-calm="Contact" data-c4="Panic" data-c8="Help!!!">Contact</a>
+    </nav>
+  </header>
+
+  <div class="ticker" aria-label="Notice board"><span id="tickTxt" data-calm="NOTICE: Semester registration closes today at 11:59 PM ★ Hostel allotment list is on the notice board ★ Library fines may be paid in books ★ End-semester timetable released ★" data-c4="NOTICE: Registration closes in 11 seconds ★ Hostel allotment decided by ducks ★ Library now charges for silence ★ Timetable is a suggestion ★" data-c8="BREAKING: The website has left the building ★ Dean spotted crying in the mess ★ Exams replaced by vibes ★ Please stop clicking ★">NOTICE: Semester registration closes today at 11:59 PM ★ Hostel allotment list is on the notice board ★ Library fines may be paid in books ★ End-semester timetable released ★</span></div>
+
+  <!-- ===== HERO: the job you came here to do ===== -->
+  <div class="hero" id="top">
+    <div>
+      <span class="eyebrow" data-calm="Autumn 2026 · Semester registration" data-c4="Autumn 2026 · Semester suffering" data-c8="Send help">Autumn 2026 · Semester registration</span>
+      <h1 data-calm="Finish your registration in 4 easy steps." data-c4="Finish your registration in 4 impossible steps." data-c8="REGISTER (GOOD LUCK)">Finish your registration in 4 easy steps.</h1>
+      <p class="lede" data-calm="Upload your ID photo, pay the fee, pick your hostel preferences and check your result. It takes about five minutes." data-c4="Upload your ID photo, pay the fee, pick your preferences and check your result. It takes about five hours." data-c8="Nothing here works. The ducks are in charge. Please bring snacks.">Upload your ID photo, pay the fee, pick your hostel preferences and check your result. It takes about five minutes.</p>
+      <div class="row">
+        <button class="btn" data-act="register" data-flee="orbit" data-flee-min="7" type="button" data-calm="Verify my documents" data-c4="Panic about my documents" data-c8="SCREAM AT DOCUMENTS">Verify my documents</button>
+        <button class="btn ghost" data-act="donot" type="button" data-calm="Skip registration" data-c4="Definitely skip" data-c8="SKIP IT ALL">Skip registration</button>
+      </div>
+      <p class="fine" data-calm="Deadline: today, 11:59 PM." data-c4="Deadline: whenever the ducks say." data-c8="Deadline: yesterday.">Deadline: today, 11:59 PM.</p>
+    </div>
+
+    <aside class="regcard" id="regCard" aria-label="Your registration progress">
+      <div class="regtop"><b data-calm="Your registration" data-c4="Your suffering" data-c8="Your doom">Your registration</b><span id="regCount">0/4</span></div>
+      <div class="bar"><i id="regBar"></i></div>
+      <ul id="regList">
+        <li data-step="photo"><a href="#upload"><span class="tick" aria-hidden="true"></span><span data-calm="Upload ID photo" data-c4="Upload ID face" data-c8="Feed the camera">Upload ID photo</span></a></li>
+        <li data-step="fee"><a href="#fees"><span class="tick" aria-hidden="true"></span><span data-calm="Pay semester fee" data-c4="Pay semester ransom" data-c8="Give us money">Pay semester fee</span></a></li>
+        <li data-step="prefs"><a href="#settings"><span class="tick" aria-hidden="true"></span><span data-calm="Hostel &amp; mess preferences" data-c4="Hostel &amp; mess complaints" data-c8="Choose your fate">Hostel &amp; mess preferences</span></a></li>
+        <li data-step="result"><a href="#results"><span class="tick" aria-hidden="true"></span><span data-calm="Check last semester result" data-c4="Face last semester result" data-c8="Look away now">Check last semester result</span></a></li>
+      </ul>
+      <div class="relax">
+        <div class="orbwrap"><button class="orb" data-act="orb" id="orb" type="button" aria-label="Stress relief circle">breathe</button></div>
+        <p data-calm="Exam stress relief corner. Click the circle and breathe." data-c4="Exam stress relief corner. Closed due to stress." data-c8="Please scream into the circle.">Exam stress relief corner. Click the circle and breathe.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== QUICK LINKS ===== -->
+  <section id="features">
+    <h2 data-calm="Student services" data-c4="Student problems" data-c8="Student tears">Student services</h2>
+    <div class="grid3">
+      <button class="card" data-act="feat" data-i="0" type="button"><span class="tag" data-calm="Academics" data-c4="Excuses" data-c8="Lies">Academics</span><h3 data-calm="Academic calendar" data-c4="Academic suggestion" data-c8="Academic fiction">Academic calendar</h3><p data-calm="Dates for classes, exams and holidays." data-c4="Dates are approximate. Holidays are cancelled." data-c8="Every day is an exam day.">Dates for classes, exams and holidays.</p></button>
+      <button class="card" data-act="feat" data-i="1" type="button"><span class="tag" data-calm="Library" data-c4="Silence" data-c8="Shhh">Library</span><h3 data-calm="Central library" data-c4="Central library (loud)" data-c8="Central ducks">Central library</h3><p data-calm="Search books, renew loans, pay fines." data-c4="Search books. Books search you back." data-c8="The books are overdue. So are you.">Search books, renew loans, pay fines.</p></button>
+      <button class="card" data-act="feat" data-i="2" type="button"><span class="tag" data-calm="Placements" data-c4="Hopes" data-c8="Dreams">Placements</span><h3 data-calm="Training &amp; placement" data-c4="Training &amp; panic" data-c8="Trauma &amp; placement">Training &amp; placement</h3><p data-calm="Companies, schedules and interview prep." data-c4="Companies visiting: none. Ducks visiting: many." data-c8="Your resume was reviewed by a duck.">Companies, schedules and interview prep.</p></button>
+    </div>
+  </section>
+
+  <!-- ===== STEP 1: ID PHOTO (the upload that explodes) ===== -->
+  <section id="upload">
+    <span class="step-tag">Step 1 of 4 <span class="badge" data-badge="photo" hidden>✓ Done</span></span>
+    <h2 data-calm="Upload your ID card photo" data-c4="Upload your ID card photo (good luck)" data-c8="Upload your face (brave)">Upload your ID card photo</h2>
+    <div class="upload" id="drop">
+      <div class="prev" id="prev">
+        <canvas id="prevCv" aria-label="Your uploaded photo"></canvas>
+        <div class="ph" id="prevPh"><b>Drop your photo here</b><span>or paste one. Passport style, plain background.</span></div>
+      </div>
+      <div class="upside">
+        <p class="status" id="upStatus" aria-live="polite">No photo yet. Your ID card is feeling lonely.</p>
+        <div class="bar"><i id="upBar"></i></div>
+        <div class="row">
+          <button class="btn" id="pickBtn" type="button" data-flee="shy" data-flee-min="2" data-tired="6">Choose photo</button>
+          <button class="btn ghost" id="sampleBtn" type="button">Use sample photo</button>
+        </div>
+        <div class="row">
+          <button class="btn ghost" id="reBtn" type="button" hidden>Reassemble</button>
+          <button class="btn ghost" id="sweepBtn" type="button" hidden>Sweep up</button>
+        </div>
+        <input type="file" id="file" accept="image/*" hidden>
+        <p class="fine">JPG or PNG, under 2 MB. The upload works best if you do not look at it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 2: FEE PAYMENT ===== -->
+  <section id="fees">
+    <span class="step-tag">Step 2 of 4 <span class="badge" data-badge="fee" hidden>✓ Done</span></span>
+    <h2 data-calm="Pay your semester fee" data-c4="Pay your semester ransom" data-c8="Pay up">Pay your semester fee</h2>
+    <form class="card feecard" id="payForm" novalidate>
+      <div class="field">
+        <label for="roll">Roll number</label>
+        <input id="roll" type="text" placeholder="e.g. 24JE0123" autocomplete="off" maxlength="16">
+      </div>
+      <div class="field">
+        <label for="feeFor">Payment for</label>
+        <select id="feeFor"><option>Tuition, Autumn 2026</option><option>Hostel &amp; mess</option><option>Library fine</option></select>
+      </div>
+      <div class="field">
+        <span class="lbl">Amount due</span>
+        <b class="amount" id="feeAmt" data-calm="₹1,42,500" data-c4="₹1,42,500 + vibes" data-c8="₹-99 (we owe you)">₹1,42,500</b>
+      </div>
+      <button class="btn" id="payBtn" type="submit" data-flee="teleport" data-flee-min="2" data-tired="4" data-calm="Pay now" data-c4="Pay now (try)" data-c8="CATCH ME">Pay now</button>
+    </form>
+  </section>
+
+  <!-- ===== STEP 3: HOSTEL & MESS PREFERENCES (the lying controls) ===== -->
+  <section id="settings">
+    <span class="step-tag">Step 3 of 4 <span class="badge" data-badge="prefs" hidden>✓ Done</span></span>
+    <h2 data-calm="Hostel &amp; mess preferences" data-c4="Hostel &amp; mess complaints" data-c8="Hostel &amp; mess fate">Hostel &amp; mess preferences</h2>
+    <div class="card settings">
+      <div class="set">
+        <label for="calm">Mess spice level <output id="calmOut" for="calm">50%</output></label>
+        <input type="range" id="calm" min="0" max="100" value="50">
+      </div>
+      <div class="set sw">
+        <label><input type="checkbox" id="chaosOn" checked> Attend 6 AM assembly</label>
+        <label><input type="checkbox" id="darkTgl"> Dark mode</label>
+      </div>
+      <div class="set">
+        <label for="lang">Medium of instruction</label>
+        <select id="lang"><option value="en">English (UK)</option><option value="duck">Duck</option><option value="pirate">Pirate</option><option value="emoji">Emoji</option><option value="shout">LOUD</option></select>
+      </div>
+      <div class="set"><button class="btn" id="saveBtn" type="button" data-flee="teleport" data-flee-min="3" data-tired="4">Save preferences</button></div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 4: RESULT ===== -->
+  <section id="results">
+    <span class="step-tag">Step 4 of 4 <span class="badge" data-badge="result" hidden>✓ Done</span></span>
+    <h2 data-calm="Check last semester's result" data-c4="Face last semester's result" data-c8="Look away">Check last semester's result</h2>
+    <form class="news" id="resultForm" novalidate>
+      <input id="resultRoll" type="text" placeholder="Roll number" aria-label="Roll number for result" autocomplete="off" maxlength="16">
+      <button class="btn" id="resultBtn" type="submit">View result</button>
+    </form>
+    <div class="card resultcard" id="resultCard" hidden>
+      <table>
+        <thead><tr><th scope="col">Subject</th><th scope="col">Grade</th></tr></thead>
+        <tbody>
+          <tr><td data-calm="Engineering Mathematics III" data-c4="Engineering Mathematics III" data-c8="Vibes III">Engineering Mathematics III</td><td class="grade" data-calm="A" data-c4="C" data-c8="🔥">A</td></tr>
+          <tr><td data-calm="Data Structures" data-c4="Data Structures" data-c8="Data Ducks">Data Structures</td><td class="grade" data-calm="A-" data-c4="F" data-c8="💀">A-</td></tr>
+          <tr><td data-calm="Thermodynamics" data-c4="Thermodynamics" data-c8="Thermo-dynamite">Thermodynamics</td><td class="grade" data-calm="B+" data-c4="B-" data-c8="🦆">B+</td></tr>
+          <tr><td data-calm="Engineering Ducks (Elective)" data-c4="Engineering Ducks (Elective)" data-c8="Engineering Ducks (Elective)">Engineering Ducks (Elective)</td><td class="grade" data-calm="A+" data-c4="A+" data-c8="∞">A+</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">CGPA</th><td class="grade" data-calm="9.1" data-c4="2.4" data-c8="-3">9.1</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== HELPDESK AI ===== -->
+  <section id="ai">
+    <h2 data-calm="QIT Helpdesk (AI)" data-c4="QUIT Helpdesk (AI, mostly ducks)" data-c8="Ask a duck">QIT Helpdesk (AI)</h2>
+    <div class="card chat">
+      <div class="log" id="chatLog" aria-live="polite"><div class="msg bot">Hi, I am Clicky, the QIT helpdesk assistant. Ask me anything. I will answer something.</div></div>
+      <form class="news" id="chatForm" novalidate>
+        <input id="chatIn" type="text" placeholder="Ask about hostel, fees, exams…" aria-label="Your question" autocomplete="off">
+        <button class="btn" id="sendBtn" type="submit" data-flee="shy" data-flee-min="5" data-tired="5">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMMES & FEES ===== -->
+  <section id="pricing">
+    <h2 data-calm="Programmes &amp; fee structure" data-c4="Programmes &amp; ransom structure" data-c8="Programmes &amp; prayers">Programmes &amp; fee structure</h2>
+    <div class="grid3">
+      <div class="card price"><span class="tag">B.Tech</span><div class="amt" data-calm="₹1.4 L / sem" data-c4="₹1.4 L + a kidney" data-c8="₹-99">₹1.4 L / sem</div><ul><li data-calm="4 years, 8 semesters" data-c4="4 years, 12 semesters" data-c8="Forever">4 years, 8 semesters</li><li data-calm="Hostel included" data-c4="Hostel (haunted)" data-c8="Hostel is a tent">Hostel included</li></ul><button class="btn small" data-act="buy" data-flee="shy" data-flee-min="8" data-tired="3" type="button" data-calm="Apply to B.Tech" data-c4="Apply (why)" data-c8="RUN">Apply to B.Tech</button></div>
+      <div class="card price best"><span class="tag" style="color:inherit">M.Tech</span><div class="amt" data-calm="₹90 K / sem" data-c4="₹90 K + your soul" data-c8="₹∞">₹90 K / sem</div><ul><li data-calm="2 years, 4 semesters" data-c4="2 years, 9 semesters" data-c8="Send help">2 years, 4 semesters</li><li data-calm="Research stipend" data-c4="Research biscuit" data-c8="Research duck">Research stipend</li></ul><button class="btn small" data-act="buy" data-flee="shy" data-flee-min="8" data-tired="3" type="button" data-calm="Apply to M.Tech" data-c4="Apply (doom)" data-c8="HELP">Apply to M.Tech</button></div>
+      <div class="card price"><span class="tag">PhD</span><div class="amt" data-calm="Stipend ₹37 K" data-c4="Stipend ₹37 (nice)" data-c8="Stipend: hugs">Stipend ₹37 K</div><ul><li data-calm="3 to 5 years" data-c4="5 to 11 years" data-c8="Lifetime">3 to 5 years</li><li data-calm="Supervisor assigned" data-c4="Supervisor is on leave" data-c8="Supervisor is a duck">Supervisor assigned</li></ul><button class="btn small" data-act="buy" data-flee="shy" data-flee-min="8" data-tired="3" type="button" data-calm="Apply to PhD" data-c4="Apply (brave)" data-c8="QUACK">Apply to PhD</button></div>
+    </div>
+  </section>
+
+  <!-- ===== NOTICE ALERTS ===== -->
+  <section id="contact">
+    <h2 data-calm="Get notice alerts by email" data-c4="Get notice panic by email" data-c8="Daily duck facts">Get notice alerts by email</h2>
+    <form class="news" id="newsForm" novalidate>
+      <input id="email" type="email" placeholder="you@qit.example" aria-label="Email address" autocomplete="off">
+      <button class="btn runaway" id="subBtn" type="submit" data-giveup="Fine. Subscribe." data-calm="Subscribe" data-c4="Subscribe (try)" data-c8="CATCH ME">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <span data-calm="© 2026 Quackwell Institute of Technology. A fictional college." data-c4="© 2026 QUIT. A fictional college, sadly." data-c8="© lol">© 2026 Quackwell Institute of Technology. A fictional college.</span>
+    <span><button type="button" data-act="terms">Rules</button> · <button type="button" data-act="privacy" data-calm="Privacy" data-c4="Privacy (we have none)" data-c8="Privacy (we see you)">Privacy</button> · <button type="button" data-act="help">How this works</button></span>
+    <span id="made">Built at VibeHack ’26</span>
+  </footer>
+</div></div></div>
+
+<canvas id="debris" aria-hidden="true"></canvas>
+<canvas id="cracks" aria-hidden="true"></canvas>
+<div id="toasts" aria-live="polite"></div>
+<div id="clicky" aria-live="polite"><div class="bub" id="bub"></div><button type="button" id="clickyBtn" aria-label="Clicky the assistant">🫠</button></div>
+<div id="dvd">QIT™</div>
+
+<aside id="hud" aria-label="Chaos meter">
+  <div class="top"><span class="lbl">Chaos level <b id="lvlNum">0</b>/10</span><span id="rank">Zen Monk</span></div>
+  <div id="meter"></div>
+  <div class="stats"><span>Clicks: <b id="clk">0</b></span><span id="bestTxt"></span></div>
+  <div class="btns">
+    <button type="button" id="calmBtn">Calm Down</button>
+    <button type="button" id="achBtn" aria-label="Secrets">🏆 <span id="achN">0</span></button>
+    <button type="button" id="muteBtn" aria-label="Toggle sound">🔊</button>
+  </div>
+</aside>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/popups.js"></script>
+<script src="js/gags.js"></script>
+<script src="js/clicky.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/canvas-fx.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/flee.js"></script>
+<script src="js/widgets.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
